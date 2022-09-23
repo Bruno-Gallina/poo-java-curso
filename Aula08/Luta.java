@@ -46,32 +46,34 @@ public void marcarLuta(Lutador l1, Lutador l2) {
         this.setDesafiante(l2);
     } else {
         this.setAprovada(false);
-        this.setDesafiado(l1);
-        this.setDesafiante(l2);
+        this.setDesafiado(null);
+        this.setDesafiante(null);
     }
 }
 
 public void lutar() {
     if (this.getAprovada()) {
+        System.out.println("### DESAFIADO ###");
         this.getDesafiado().apresentar();
+        System.out.println("DESAFIANTE");
         this.getDesafiante().apresentar();
         Random gerador = new Random();
-        int vencedor = gerador.nextInt(3);
+        int vencedor = gerador.nextInt(3); // 0 1 2
         
         switch(vencedor) {
-            case 0 -> {
+            case 0 -> { // Empate
                 System.out.println("Empate!");
                 desafiado.empatarLuta();
                 desafiante.empatarLuta();
                 break;   
             }
-            case 1 -> {
+            case 1 -> { // Vitória do Desafiado
                 System.out.println("Vitória do desafiado!" + this.getDesafiado().getNome());
                 desafiado.ganharLuta();
                 desafiante.perderLuta();
                 break;
             }
-            case 2 -> {
+            case 2 -> { // Vitória do Desafiante
                 System.out.println("Vitória do desafiante!" + this.getDesafiante().getNome());
                 desafiante.ganharLuta();
                 desafiado.perderLuta();
