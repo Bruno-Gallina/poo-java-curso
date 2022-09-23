@@ -15,7 +15,9 @@ public class Aula09 {
         
         l[0].abrir();
         l[0].folhear(200);
+        l[0].avancarPag();
         System.out.println(l[0].detalhes());
+        System.out.println(l[1].detalhes());
     }
     
 }
