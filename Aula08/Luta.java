@@ -59,6 +59,7 @@ public void lutar() {
         this.getDesafiante().apresentar();
         Random gerador = new Random();
         int vencedor = gerador.nextInt(3); // 0 1 2
+        System.out.println("----- RESULTADO DA LUTA -----");
         
         switch(vencedor) {
             case 0 -> { // Empate
