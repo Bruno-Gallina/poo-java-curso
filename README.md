@@ -7,7 +7,6 @@ To Do List
   Class Carro {
     private String modelo;
   
-- create and add ControleRemoto.java to Aula06
-- create and add Aula07 with Lutador.java
-- Finish course(60%~ left/24h)
+
+
 
